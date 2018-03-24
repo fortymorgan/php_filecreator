@@ -10,21 +10,23 @@ function create_array($size) {
 }
 
 //creating a couple of files
-for ($i = 1; $i <= 10; $i++) {
-	$name = str_pad($i, 2, "0", STR_PAD_LEFT);
+function create_files($amount) {
+	for ($i = 1; $i <= $amount; $i++) {
+		$name = str_pad($i, 2, "0", STR_PAD_LEFT);
 
-	$fp = fopen("$name.txt", "w");
+		$fp = fopen("$name.txt", "w");
 
-	$numarr = create_array(100);
+		$numarr = create_array(100);
 
-	//posting numbers from array multiplicated on file's number
-	foreach ($numarr as $num) {
-		$wnum = $num * $i;
+		//posting numbers from array multiplicated on file's number
+		foreach ($numarr as $num) {
+			$wnum = $num * $i;
 
-		fwrite($fp, $wnum . "\r\n");
+			fwrite($fp, $wnum . "\r\n");
+		}
+
+		fclose($fp);
 	}
-
-	fclose($fp);
 }
-
+create_files(10);
 ?>
