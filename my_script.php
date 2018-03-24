@@ -2,8 +2,11 @@
 <?php
 
 //creating an array of numbers to post in file
-for ($j = 1 ; $j <= 100 ; $j++) {
-	$numarr[$j] = $j;
+function create_array($size) {
+	for ($j = 1 ; $j <= 100 ; $j++) {
+		$numarr[$j] = $j;
+	}
+	return $numarr;
 }
 
 //creating a couple of files
