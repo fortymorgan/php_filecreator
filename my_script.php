@@ -15,6 +15,8 @@ for ($i = 1; $i <= 10; $i++) {
 
 	$fp = fopen("$name.txt", "w");
 
+	$numarr = create_array(100);
+
 	//posting numbers from array multiplicated on file's number
 	foreach ($numarr as $num) {
 		$wnum = $num * $i;
