@@ -3,7 +3,7 @@
 
 //creating an array of numbers to post in file
 function create_array($size) {
-	for ($j = 1 ; $j <= 100 ; $j++) {
+	for ($j = 1; $j <= $size; $j++) {
 		$numarr[$j] = $j;
 	}
 	return $numarr;
