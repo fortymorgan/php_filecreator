@@ -12,7 +12,7 @@ function create_array($size) {
 //creating a couple of files
 function create_files($amount) {
 	for ($i = 1; $i <= $amount; $i++) {
-		$name = str_pad($i, 2, "0", STR_PAD_LEFT);
+		$name = str_pad($i, strlen($amount), "0", STR_PAD_LEFT);
 
 		$fp = fopen("$name.txt", "w");
 
